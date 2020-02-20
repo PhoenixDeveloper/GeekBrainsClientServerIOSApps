@@ -76,14 +76,66 @@
                     <connections>
                         <outlet property="loginTextField" destination="IQU-B2-tyA" id="Bqq-tZ-HzV"/>
                         <outlet property="passwordTextField" destination="w4s-bK-bCJ" id="pVu-6Z-lVK"/>
+                        <segue destination="Dzo-EP-QJg" kind="show" identifier="moveToApp" id="e9x-De-s3x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="118"/>
         </scene>
+        <!--Новости-->
+        <scene sceneID="h93-aM-BTR">
+            <objects>
+                <viewController id="tUl-gs-B5f" customClass="NewsScreenViewController" customModule="SocialNetworkForGeekBrains" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Da-c6-XdB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n57-OX-pif">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oGe-cj-RbQ" firstAttribute="bottom" secondItem="n57-OX-pif" secondAttribute="bottom" id="3jF-1i-FNy"/>
+                            <constraint firstItem="n57-OX-pif" firstAttribute="top" secondItem="oGe-cj-RbQ" secondAttribute="top" id="Prr-Kp-isI"/>
+                            <constraint firstItem="n57-OX-pif" firstAttribute="leading" secondItem="oGe-cj-RbQ" secondAttribute="leading" id="fNn-ho-jxZ"/>
+                            <constraint firstItem="oGe-cj-RbQ" firstAttribute="trailing" secondItem="n57-OX-pif" secondAttribute="trailing" id="keD-8C-WO9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oGe-cj-RbQ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Новости" image="newsIcon" id="VLb-QA-SaI"/>
+                    <connections>
+                        <outlet property="tableView" destination="n57-OX-pif" id="vE0-0e-8Ug"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1YG-c7-y2o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2386" y="-445"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ytw-I1-iOl">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Dzo-EP-QJg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="A94-7N-Z56"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YDS-5r-dvw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tUl-gs-B5f" kind="relationship" relationship="viewControllers" id="2UM-ig-2h3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QrJ-Mu-74m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1431.8840579710145" y="111.83035714285714"/>
+        </scene>
     </scenes>
     <resources>
         <image name="WolfLogo" width="400" height="400"/>
+        <image name="newsIcon" width="69" height="69"/>
     </resources>
 </document>

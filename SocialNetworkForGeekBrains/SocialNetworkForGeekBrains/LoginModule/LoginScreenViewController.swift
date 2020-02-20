@@ -7,12 +7,9 @@
 //
 
 import UIKit
-import RxSwift
 
 class LoginScreenViewController: UIViewController {
-
-    var disposeBag = DisposeBag()
-
+    
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
@@ -26,7 +23,9 @@ class LoginScreenViewController: UIViewController {
         passwordTextField.delegate = self
     }
 
-    private func moveToApp() {}
+    private func moveToApp() {
+        performSegue(withIdentifier: "moveToApp", sender: nil)
+    }
 
     @IBAction func clickAcceptButton(_ sender: UIButton) {
         moveToApp()
