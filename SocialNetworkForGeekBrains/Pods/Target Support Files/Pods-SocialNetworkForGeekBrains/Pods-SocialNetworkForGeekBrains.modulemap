@@ -1,0 +1,6 @@
+module Pods_SocialNetworkForGeekBrains {
+  umbrella header "Pods-SocialNetworkForGeekBrains-umbrella.h"
+
+  export *
+  module * { export * }
+}
