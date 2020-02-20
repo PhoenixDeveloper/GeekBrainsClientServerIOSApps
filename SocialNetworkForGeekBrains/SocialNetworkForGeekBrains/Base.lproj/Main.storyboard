@@ -127,15 +127,48 @@
                     </tabBar>
                     <connections>
                         <segue destination="tUl-gs-B5f" kind="relationship" relationship="viewControllers" id="2UM-ig-2h3"/>
+                        <segue destination="Ybt-qm-r7b" kind="relationship" relationship="viewControllers" id="S99-jx-Uq7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QrJ-Mu-74m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1431.8840579710145" y="111.83035714285714"/>
         </scene>
+        <!--Друзья-->
+        <scene sceneID="Inr-SI-skS">
+            <objects>
+                <viewController id="Ybt-qm-r7b" customClass="FriendListViewController" customModule="SocialNetworkForGeekBrains" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DNd-HE-ojP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bHg-bm-OpB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bHg-bm-OpB" firstAttribute="top" secondItem="3DP-y2-oKw" secondAttribute="top" id="6f6-a5-N9X"/>
+                            <constraint firstItem="bHg-bm-OpB" firstAttribute="leading" secondItem="3DP-y2-oKw" secondAttribute="leading" id="94z-CT-GBX"/>
+                            <constraint firstItem="3DP-y2-oKw" firstAttribute="bottom" secondItem="bHg-bm-OpB" secondAttribute="bottom" id="KuW-MA-pf2"/>
+                            <constraint firstItem="3DP-y2-oKw" firstAttribute="trailing" secondItem="bHg-bm-OpB" secondAttribute="trailing" id="OrT-yq-nBm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3DP-y2-oKw"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Друзья" image="friendsIcon" id="g1h-8Z-bkG"/>
+                    <connections>
+                        <outlet property="tableView" destination="bHg-bm-OpB" id="Sa9-Zg-e3v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t3B-DR-yJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2436" y="366"/>
+        </scene>
     </scenes>
     <resources>
         <image name="WolfLogo" width="400" height="400"/>
-        <image name="newsIcon" width="69" height="69"/>
+        <image name="friendsIcon" width="40" height="40"/>
+        <image name="newsIcon" width="46" height="46"/>
     </resources>
 </document>

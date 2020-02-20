@@ -22,6 +22,10 @@ class NewsScreenViewController: UIViewController, DTTableViewManageable {
 
     private func registerCell() {
         manager.register(NewsTableViewCell.self)
+
+        manager.didSelect(NewsTableViewCell.self) { cell, _, _ in
+            cell.setSelected(false, animated: true)
+        }
     }
 
     private func getMockedData() -> [NewsModel] {

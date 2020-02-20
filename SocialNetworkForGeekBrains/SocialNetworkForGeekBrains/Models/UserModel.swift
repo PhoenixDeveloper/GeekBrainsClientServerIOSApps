@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct UserModel {
+class UserModel {
     let lastName: String
     let firstName: String
     let secondName: String?
@@ -17,5 +17,17 @@ struct UserModel {
 
     var fullName: String {
         ("\(lastName) \(firstName)\(secondName != nil ? " " + secondName! : "")")
+    }
+
+    init(lastName: String,
+         firstName: String,
+         secondName: String?,
+         age: Int,
+         photo: UIImage?) {
+        self.lastName = lastName
+        self.firstName = firstName
+        self.secondName = secondName
+        self.age = age
+        self.photo = photo
     }
 }

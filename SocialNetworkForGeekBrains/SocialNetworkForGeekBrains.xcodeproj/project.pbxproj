@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33A2CFD423FE842D00B50427 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2CFD323FE842D00B50427 /* FriendListViewController.swift */; };
+		33A2CFD723FE84C500B50427 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2CFD623FE84C500B50427 /* FriendTableViewCell.swift */; };
 		33AE7E8323FE60910007DC41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AE7E8223FE60910007DC41 /* AppDelegate.swift */; };
 		33AE7E8523FE60910007DC41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AE7E8423FE60910007DC41 /* SceneDelegate.swift */; };
 		33AE7E8A23FE60910007DC41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AE7E8823FE60910007DC41 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33A2CFD323FE842D00B50427 /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
+		33A2CFD623FE84C500B50427 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		33AE7E7F23FE60910007DC41 /* SocialNetworkForGeekBrains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetworkForGeekBrains.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AE7E8223FE60910007DC41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33AE7E8423FE60910007DC41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		33A2CFD223FE828100B50427 /* FriendsListModule */ = {
+			isa = PBXGroup;
+			children = (
+				33A2CFD523FE84A800B50427 /* Cells */,
+				33A2CFD323FE842D00B50427 /* FriendListViewController.swift */,
+			);
+			path = FriendsListModule;
+			sourceTree = "<group>";
+		};
+		33A2CFD523FE84A800B50427 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				33A2CFD623FE84C500B50427 /* FriendTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		33AE7E7623FE60910007DC41 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +100,7 @@
 		33AE7E8123FE60910007DC41 /* SocialNetworkForGeekBrains */ = {
 			isa = PBXGroup;
 			children = (
+				33A2CFD223FE828100B50427 /* FriendsListModule */,
 				33BA18C523FE6D5100F910F0 /* NewsModule */,
 				33BA18C423FE6D4600F910F0 /* Models */,
 				33AE7E9623FE60CF0007DC41 /* LoginModule */,
@@ -232,10 +254,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A2CFD723FE84C500B50427 /* FriendTableViewCell.swift in Sources */,
 				33BA18CC23FE6E4800F910F0 /* NewsModel.swift in Sources */,
 				33BA18CE23FE6E7A00F910F0 /* UserModel.swift in Sources */,
 				33AE7E8323FE60910007DC41 /* AppDelegate.swift in Sources */,
 				33BA18C723FE6D7500F910F0 /* NewsScreenViewController.swift in Sources */,
+				33A2CFD423FE842D00B50427 /* FriendListViewController.swift in Sources */,
 				33BA18CA23FE6E3000F910F0 /* NewsTableViewCell.swift in Sources */,
 				33AE7E8523FE60910007DC41 /* SceneDelegate.swift in Sources */,
 				33BA18C323FE681100F910F0 /* LoginScreenViewController.swift in Sources */,

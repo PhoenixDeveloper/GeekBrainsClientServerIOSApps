@@ -13,7 +13,6 @@ import DTModelStorage
 class NewsTableViewCell: UITableViewCell, ModelTransfer {
 
     private let ownerPhotoSize = CGSize(width: 50, height: 50)
-    private var ownerPhotoConstraints: [Constraint] = []
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -54,7 +53,6 @@ class NewsTableViewCell: UITableViewCell, ModelTransfer {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         addSubviews()
-        ownerPhotoConstraints = []
         setupConstrains()
     }
 
@@ -79,10 +77,8 @@ class NewsTableViewCell: UITableViewCell, ModelTransfer {
 
         ownerPhoto.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(8)
-            ownerPhotoConstraints.append(make.leading.equalToSuperview().constraint)
-            make.leading.equalToSuperview().inset(16).priority(.high)
-            make.size.equalTo(ownerPhotoSize).priority(.high)
-            ownerPhotoConstraints.append(make.size.equalTo(CGSize(width: 0, height: 0)).constraint)
+            make.leading.equalToSuperview().inset(16)
+            make.size.equalTo(ownerPhotoSize)
         }
 
         ownerName.snp.makeConstraints { make in
@@ -107,17 +103,7 @@ class NewsTableViewCell: UITableViewCell, ModelTransfer {
     func update(with model: NewsModel) {
         titleLabel.text = model.title
 
-        if let image = model.owner.photo {
-            ownerPhoto.image = image
-            for constraint in ownerPhotoConstraints {
-                constraint.deactivate()
-            }
-        }
-        else {
-            for constraint in ownerPhotoConstraints {
-                constraint.activate()
-            }
-        }
+        ownerPhoto.image = model.owner.photo ?? UIImage(imageLiteralResourceName: "unknownPhoto")
 
         ownerName.text = model.owner.fullName
         dateLabel.text = convertDate(date: model.date)
