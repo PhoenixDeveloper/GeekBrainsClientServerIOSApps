@@ -10,6 +10,7 @@
 		33A2CFD423FE842D00B50427 /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2CFD323FE842D00B50427 /* FriendListViewController.swift */; };
 		33A2CFD723FE84C500B50427 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2CFD623FE84C500B50427 /* FriendTableViewCell.swift */; };
 		33A2CFD923FE9BEA00B50427 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2CFD823FE9BEA00B50427 /* Session.swift */; };
+		33AB960C24043AA500987A77 /* VKRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AB960B24043AA500987A77 /* VKRequestViewController.swift */; };
 		33AE7E8323FE60910007DC41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AE7E8223FE60910007DC41 /* AppDelegate.swift */; };
 		33AE7E8523FE60910007DC41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AE7E8423FE60910007DC41 /* SceneDelegate.swift */; };
 		33AE7E8A23FE60910007DC41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AE7E8823FE60910007DC41 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		33A2CFD323FE842D00B50427 /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		33A2CFD623FE84C500B50427 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		33A2CFD823FE9BEA00B50427 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		33AB960B24043AA500987A77 /* VKRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKRequestViewController.swift; sourceTree = "<group>"; };
 		33AE7E7F23FE60910007DC41 /* SocialNetworkForGeekBrains.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetworkForGeekBrains.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AE7E8223FE60910007DC41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33AE7E8423FE60910007DC41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				33AE7E8D23FE60990007DC41 /* LaunchScreen.storyboard */,
 				33AE7E9023FE60990007DC41 /* Info.plist */,
 				33A2CFD823FE9BEA00B50427 /* Session.swift */,
+				33AB960B24043AA500987A77 /* VKRequestViewController.swift */,
 			);
 			path = SocialNetworkForGeekBrains;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				33BA18CE23FE6E7A00F910F0 /* UserModel.swift in Sources */,
 				33AE7E8323FE60910007DC41 /* AppDelegate.swift in Sources */,
 				33BA18C723FE6D7500F910F0 /* NewsScreenViewController.swift in Sources */,
+				33AB960C24043AA500987A77 /* VKRequestViewController.swift in Sources */,
 				33A2CFD423FE842D00B50427 /* FriendListViewController.swift in Sources */,
 				33BA18CA23FE6E3000F910F0 /* NewsTableViewCell.swift in Sources */,
 				33AE7E8523FE60910007DC41 /* SceneDelegate.swift in Sources */,

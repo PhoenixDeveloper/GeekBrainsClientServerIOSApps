@@ -88,6 +88,7 @@
                     <connections>
                         <segue destination="tUl-gs-B5f" kind="relationship" relationship="viewControllers" id="2UM-ig-2h3"/>
                         <segue destination="Ybt-qm-r7b" kind="relationship" relationship="viewControllers" id="S99-jx-Uq7"/>
+                        <segue destination="xtH-2o-jOi" kind="relationship" relationship="viewControllers" id="4yE-ji-Lnb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QrJ-Mu-74m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -124,6 +125,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t3B-DR-yJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2436" y="366"/>
+        </scene>
+        <!--VK-->
+        <scene sceneID="g6W-jn-VUa">
+            <objects>
+                <viewController id="xtH-2o-jOi" customClass="VKRequestViewController" customModule="SocialNetworkForGeekBrains" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JWq-dx-sxl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6x-5X-1Tu">
+                                <rect key="frame" x="16" y="16" width="382" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Получить список друзей"/>
+                                <connections>
+                                    <action selector="getFriendList:" destination="xtH-2o-jOi" eventType="touchUpInside" id="X41-ET-60u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d55-pR-yV0">
+                                <rect key="frame" x="16" y="74" width="382" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Получить фотографии"/>
+                                <connections>
+                                    <action selector="getPhoto:" destination="xtH-2o-jOi" eventType="touchUpInside" id="TmM-gT-QE9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AU1-tX-tdS">
+                                <rect key="frame" x="16" y="132" width="382" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Получить группы текущего пользователя"/>
+                                <connections>
+                                    <action selector="getGroupCurrentUser:" destination="xtH-2o-jOi" eventType="touchUpInside" id="8Uc-MU-H4V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FH4-J8-ezF">
+                                <rect key="frame" x="16" y="232" width="382" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Получить группы по запросу"/>
+                                <connections>
+                                    <action selector="getGroupWithSearch:" destination="xtH-2o-jOi" eventType="touchUpInside" id="fmO-Zi-HGZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N2d-xh-H8O">
+                                <rect key="frame" x="16" y="190" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="d55-pR-yV0" firstAttribute="top" secondItem="T6x-5X-1Tu" secondAttribute="bottom" constant="16" id="0ci-hV-bJ3"/>
+                            <constraint firstItem="AU1-tX-tdS" firstAttribute="leading" secondItem="JWq-dx-sxl" secondAttribute="leading" constant="16" id="1XR-Pw-KNK"/>
+                            <constraint firstItem="AU1-tX-tdS" firstAttribute="top" secondItem="d55-pR-yV0" secondAttribute="bottom" constant="16" id="4OK-cr-Ze6"/>
+                            <constraint firstAttribute="trailing" secondItem="AU1-tX-tdS" secondAttribute="trailing" constant="16" id="6hk-P6-oTk"/>
+                            <constraint firstItem="FH4-J8-ezF" firstAttribute="top" secondItem="N2d-xh-H8O" secondAttribute="bottom" constant="8" id="6vO-BS-oFO"/>
+                            <constraint firstItem="N2d-xh-H8O" firstAttribute="leading" secondItem="Fmh-G9-8oA" secondAttribute="leading" constant="16" id="Ahq-tY-9hI"/>
+                            <constraint firstItem="N2d-xh-H8O" firstAttribute="top" secondItem="AU1-tX-tdS" secondAttribute="bottom" constant="16" id="B35-Ts-oIj"/>
+                            <constraint firstItem="FH4-J8-ezF" firstAttribute="leading" secondItem="Fmh-G9-8oA" secondAttribute="leading" constant="16" id="Gzw-n3-eeS"/>
+                            <constraint firstItem="T6x-5X-1Tu" firstAttribute="leading" secondItem="Fmh-G9-8oA" secondAttribute="leading" constant="16" id="Hx7-lo-UQZ"/>
+                            <constraint firstItem="d55-pR-yV0" firstAttribute="leading" secondItem="Fmh-G9-8oA" secondAttribute="leading" constant="16" id="JLc-p4-YnA"/>
+                            <constraint firstItem="T6x-5X-1Tu" firstAttribute="top" secondItem="Fmh-G9-8oA" secondAttribute="top" constant="16" id="Qqg-ki-jsb"/>
+                            <constraint firstItem="Fmh-G9-8oA" firstAttribute="trailing" secondItem="FH4-J8-ezF" secondAttribute="trailing" constant="16" id="b4P-KP-VVL"/>
+                            <constraint firstItem="Fmh-G9-8oA" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="FH4-J8-ezF" secondAttribute="bottom" constant="16" id="cXC-Y5-KyC"/>
+                            <constraint firstItem="Fmh-G9-8oA" firstAttribute="trailing" secondItem="T6x-5X-1Tu" secondAttribute="trailing" constant="16" id="dGA-Tq-KF2"/>
+                            <constraint firstItem="Fmh-G9-8oA" firstAttribute="trailing" secondItem="N2d-xh-H8O" secondAttribute="trailing" constant="16" id="fvA-E0-cJ6"/>
+                            <constraint firstItem="Fmh-G9-8oA" firstAttribute="trailing" secondItem="d55-pR-yV0" secondAttribute="trailing" constant="16" id="zGa-tV-cAp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fmh-G9-8oA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="VK" id="tYC-Io-XS1"/>
+                    <connections>
+                        <outlet property="friendListButton" destination="T6x-5X-1Tu" id="6if-80-8CP"/>
+                        <outlet property="groupCurrentUserButton" destination="AU1-tX-tdS" id="boS-Qb-zbZ"/>
+                        <outlet property="groupSearchButton" destination="FH4-J8-ezF" id="DFs-f8-X88"/>
+                        <outlet property="photoButton" destination="d55-pR-yV0" id="lsO-Ho-wbO"/>
+                        <outlet property="searchTextField" destination="N2d-xh-H8O" id="Sol-CM-s1c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOV-eC-9nl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2451" y="1113"/>
         </scene>
     </scenes>
     <resources>

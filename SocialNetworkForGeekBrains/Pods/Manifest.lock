@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (5.0.0)
   - DTModelStorage (8.0.0):
     - DTModelStorage/Core (= 8.0.0)
   - DTModelStorage/Core (8.0.0)
@@ -13,6 +14,7 @@ PODS:
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.0)
   - DTTableViewManager
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
@@ -20,6 +22,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - DTModelStorage
     - DTTableViewManager
     - RxCocoa
@@ -28,6 +31,7 @@ SPEC REPOS:
     - SnapKit
 
 SPEC CHECKSUMS:
+  Alamofire: 58ff2bfb8daaacaa233d5c36e37b10a5248f59b1
   DTModelStorage: 3b86a1e37496532bbd74cadc5b9310238d5ba780
   DTTableViewManager: 0ada743292338c2e7b5494f41544afc9d3055fbb
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
@@ -35,6 +39,6 @@ SPEC CHECKSUMS:
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: e192c2c216487af64dbd79b79d5f8aa523f90184
+PODFILE CHECKSUM: e1d2871ad4809db2154a51e8e84cb30f41068d5b
 
 COCOAPODS: 1.8.4
