@@ -16,66 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WolfLogo" translatesAutoresizingMaskIntoConstraints="NO" id="gcD-Zd-yDO">
-                                <rect key="frame" x="16" y="60" width="382" height="191"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="gcD-Zd-yDO" secondAttribute="height" multiplier="2:1" id="KYB-HW-g76"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGk-kB-llV">
-                                <rect key="frame" x="16" y="267" width="62" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IQU-B2-tyA">
-                                <rect key="frame" x="86" y="262" width="312" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgt-6r-owN">
-                                <rect key="frame" x="16" y="307" width="73.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w4s-bK-bCJ">
-                                <rect key="frame" x="97.5" y="302" width="300.5" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8J-U9-EYp">
-                                <rect key="frame" x="172" y="352" width="70" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Войти"/>
-                                <connections>
-                                    <action selector="clickAcceptButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d9W-eh-LbL"/>
-                                </connections>
-                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lS8-Od-c9m">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="w4s-bK-bCJ" firstAttribute="leading" secondItem="Pgt-6r-owN" secondAttribute="trailing" constant="8" id="3wb-t2-cod"/>
-                            <constraint firstItem="Pgt-6r-owN" firstAttribute="top" secondItem="fGk-kB-llV" secondAttribute="bottom" constant="16" id="5MG-iA-aHb"/>
-                            <constraint firstItem="Pgt-6r-owN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5cE-kY-Ai2"/>
-                            <constraint firstItem="D8J-U9-EYp" firstAttribute="top" secondItem="w4s-bK-bCJ" secondAttribute="bottom" constant="16" id="83n-7t-2kW"/>
-                            <constraint firstItem="D8J-U9-EYp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B8l-vN-CFC"/>
-                            <constraint firstItem="fGk-kB-llV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EBa-ak-kVt"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w4s-bK-bCJ" secondAttribute="trailing" constant="16" id="Hwr-Va-pRL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IQU-B2-tyA" secondAttribute="trailing" constant="16" id="MjS-8e-6NY"/>
-                            <constraint firstItem="IQU-B2-tyA" firstAttribute="leading" secondItem="fGk-kB-llV" secondAttribute="trailing" constant="8" id="Nme-Zq-msY"/>
-                            <constraint firstItem="fGk-kB-llV" firstAttribute="top" secondItem="gcD-Zd-yDO" secondAttribute="bottom" constant="16" id="UOM-Wu-ZqJ"/>
-                            <constraint firstItem="gcD-Zd-yDO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="V0L-z1-QC2"/>
-                            <constraint firstItem="gcD-Zd-yDO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kJJ-bY-8bg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gcD-Zd-yDO" secondAttribute="trailing" constant="16" id="ld4-gn-3i9"/>
-                            <constraint firstItem="w4s-bK-bCJ" firstAttribute="centerY" secondItem="Pgt-6r-owN" secondAttribute="centerY" id="uK4-bq-bcm"/>
-                            <constraint firstItem="IQU-B2-tyA" firstAttribute="centerY" secondItem="fGk-kB-llV" secondAttribute="centerY" id="yxa-V7-gQr"/>
+                            <constraint firstItem="lS8-Od-c9m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4xh-Rp-WaZ"/>
+                            <constraint firstItem="lS8-Od-c9m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mhg-Bv-iuo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lS8-Od-c9m" secondAttribute="trailing" id="nRP-hv-J8K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lS8-Od-c9m" secondAttribute="bottom" id="xhk-GP-Vgw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="loginTextField" destination="IQU-B2-tyA" id="Bqq-tZ-HzV"/>
-                        <outlet property="passwordTextField" destination="w4s-bK-bCJ" id="pVu-6Z-lVK"/>
+                        <outlet property="webView" destination="lS8-Od-c9m" id="pdA-b5-tcV"/>
                         <segue destination="Dzo-EP-QJg" kind="show" identifier="moveToApp" id="e9x-De-s3x"/>
                     </connections>
                 </viewController>
@@ -117,7 +77,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Ytw-I1-iOl">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Dzo-EP-QJg" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Dzo-EP-QJg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="A94-7N-Z56"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YDS-5r-dvw">
@@ -167,7 +127,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="WolfLogo" width="400" height="400"/>
         <image name="friendsIcon" width="40" height="40"/>
         <image name="newsIcon" width="46" height="46"/>
     </resources>

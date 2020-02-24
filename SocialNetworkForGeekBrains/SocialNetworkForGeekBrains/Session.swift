@@ -9,7 +9,7 @@
 import Foundation
 
 class Session {
-    let storage = Session()
+    static let storage = Session()
 
     var token: String?
     var userId: Int?
