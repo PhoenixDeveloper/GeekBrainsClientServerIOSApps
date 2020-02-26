@@ -10,6 +10,7 @@ import UIKit
 import SnapKit
 import DTModelStorage
 import RxSwift
+import Kingfisher
 
 class FriendTableViewCell: UITableViewCell, ModelTransfer {
 
@@ -89,10 +90,14 @@ class FriendTableViewCell: UITableViewCell, ModelTransfer {
     }
 
     func update(with model: UserModel) {
-        photoImageView.image = model.photo ?? UIImage(imageLiteralResourceName: "unknownPhoto")
+        if let stringURL = model.photoURL, let url = URL(string: stringURL) {
+            photoImageView.kf.setImage(with: url, placeholder: UIImage(imageLiteralResourceName: "loadingPicture"))
+        } else {
+            photoImageView.image = UIImage(imageLiteralResourceName: "unknownPhoto")
+        }
 
         usernameLabel.text = model.fullName
-        ageLabel.text = model.age.description
+        ageLabel.text = model.birthday
     }
 
     override func prepareForReuse() {

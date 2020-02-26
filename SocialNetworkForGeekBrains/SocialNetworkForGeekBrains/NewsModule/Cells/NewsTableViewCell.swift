@@ -103,7 +103,7 @@ class NewsTableViewCell: UITableViewCell, ModelTransfer {
     func update(with model: NewsModel) {
         titleLabel.text = model.title
 
-        ownerPhoto.image = model.owner.photo ?? UIImage(imageLiteralResourceName: "unknownPhoto")
+        //ownerPhoto.image = model.owner.photo ?? UIImage(imageLiteralResourceName: "unknownPhoto")
 
         ownerName.text = model.owner.fullName
         dateLabel.text = convertDate(date: model.date)

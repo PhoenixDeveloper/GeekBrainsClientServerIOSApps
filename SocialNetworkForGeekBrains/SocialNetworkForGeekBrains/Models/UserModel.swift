@@ -8,26 +8,36 @@
 
 import UIKit
 
-class UserModel {
+struct UserModel: Codable {
     let lastName: String
     let firstName: String
     let secondName: String?
-    let age: Int
-    let photo: UIImage?
+    let birthday: String?
+    let photoURL: String?
 
     var fullName: String {
         ("\(lastName) \(firstName)\(secondName != nil ? " " + secondName! : "")")
     }
 
-    init(lastName: String,
-         firstName: String,
-         secondName: String?,
-         age: Int,
-         photo: UIImage?) {
-        self.lastName = lastName
-        self.firstName = firstName
-        self.secondName = secondName
-        self.age = age
-        self.photo = photo
+    var age: Int? {
+        return nil
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case
+        lastName = "last_name",
+        firstName = "first_name",
+        secondName = "nickname",
+        birthday = "bdate",
+        photoURL = "photo_400_orig"
+    }
+}
+
+struct FriendsRequestModel: Codable {
+    let response: FriendsSubRequestModel
+
+    struct FriendsSubRequestModel: Codable {
+        let count: Int
+        let items: [UserModel]
     }
 }

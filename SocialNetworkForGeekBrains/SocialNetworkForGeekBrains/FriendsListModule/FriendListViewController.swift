@@ -10,6 +10,7 @@ import UIKit
 import DTTableViewManager
 import RxSwift
 import RxCocoa
+import Alamofire
 
 class FriendListViewController: UIViewController, DTTableViewManageable {
 
@@ -19,7 +20,9 @@ class FriendListViewController: UIViewController, DTTableViewManageable {
         super.viewDidLoad()
 
         registerCells()
-        manager.memoryStorage.setItems(getMockedData())
+        getData { [unowned self] data in
+            self.manager.memoryStorage.setItems(data)
+        }
     }
 
     private func registerCells() {
@@ -37,19 +40,27 @@ class FriendListViewController: UIViewController, DTTableViewManageable {
         }
     }
 
-    private func getMockedData() -> [UserModel] {
-        let user1 = UserModel(lastName: "Беленко",
-                              firstName: "Михаил",
-                              secondName: "Олегович",
-                              age: 23,
-                              photo: UIImage(imageLiteralResourceName: "userPhoto1"))
+    private func getData(complition: @escaping ([UserModel]) -> (Void)) {
+        guard let token = Session.storage.token else { return }
 
-        let user2 = UserModel(lastName: "Иванов",
-                              firstName: "Петр",
-                              secondName: nil,
-                              age: 27,
-                              photo: nil)
-
-        return [user1, user2]
+        AF.request("https://api.vk.com/method/friends.get?fields=nickname,bdate,photo_400_orig&access_token=\(token)&v=5.103").responseJSON { json in
+            do {
+                guard let data = json.data else { return }
+                complition((try JSONDecoder().decode(FriendsRequestModel.self, from: data)).response.items)
+            } catch let DecodingError.dataCorrupted(context) {
+                print(context)
+            } catch let DecodingError.keyNotFound(key, context) {
+                print("Key '\(key)' not found:", context.debugDescription)
+                print("codingPath:", context.codingPath)
+            } catch let DecodingError.valueNotFound(value, context) {
+                print("Value '\(value)' not found:", context.debugDescription)
+                print("codingPath:", context.codingPath)
+            } catch let DecodingError.typeMismatch(type, context)  {
+                print("Type '\(type)' mismatch:", context.debugDescription)
+                print("codingPath:", context.codingPath)
+            } catch {
+                print("error: ", error)
+            }
+        }
     }
 }
