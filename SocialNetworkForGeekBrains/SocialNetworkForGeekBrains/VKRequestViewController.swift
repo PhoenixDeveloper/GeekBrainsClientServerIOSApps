@@ -41,7 +41,7 @@ class VKRequestViewController: UIViewController {
     @IBAction func getFriendList(_ sender: UIButton) {
         guard let token = Session.storage.token else { return }
 
-        AF.request("https://api.vk.com/method/friends.get?fields=nickname,bdate,photo_400_orig&access_token=\(token)&v=5.103").responseJSON { data in
+        AF.request("https://api.vk.com/method/newsfeed.get?&access_token=\(token)&v=5.103").responseJSON { data in
             print(data)
         }
     }

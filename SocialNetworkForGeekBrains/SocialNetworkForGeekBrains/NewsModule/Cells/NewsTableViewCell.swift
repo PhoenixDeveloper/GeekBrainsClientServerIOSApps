@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import DTModelStorage
+import Kingfisher
 
 class NewsTableViewCell: UITableViewCell, ModelTransfer {
 
@@ -103,7 +104,11 @@ class NewsTableViewCell: UITableViewCell, ModelTransfer {
     func update(with model: NewsModel) {
         titleLabel.text = model.title
 
-        //ownerPhoto.image = model.owner.photo ?? UIImage(imageLiteralResourceName: "unknownPhoto")
+        if let stringURL = model.owner.photoURL, let url = URL(string: stringURL) {
+            ownerPhoto.kf.setImage(with: url, placeholder: UIImage(imageLiteralResourceName: "loadingPicture"))
+        } else {
+            ownerPhoto.image = UIImage(imageLiteralResourceName: "unknownPhoto")
+        }
 
         ownerName.text = model.owner.fullName
         dateLabel.text = convertDate(date: model.date)

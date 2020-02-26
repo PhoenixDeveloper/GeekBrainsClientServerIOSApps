@@ -89,6 +89,7 @@
                         <segue destination="tUl-gs-B5f" kind="relationship" relationship="viewControllers" id="2UM-ig-2h3"/>
                         <segue destination="Ybt-qm-r7b" kind="relationship" relationship="viewControllers" id="S99-jx-Uq7"/>
                         <segue destination="h8q-qb-vPc" kind="relationship" relationship="viewControllers" id="eZc-di-Md9"/>
+                        <segue destination="xtH-2o-jOi" kind="relationship" relationship="viewControllers" id="7RT-3A-KV6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QrJ-Mu-74m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -182,11 +183,11 @@
             <objects>
                 <viewController id="xtH-2o-jOi" customClass="VKRequestViewController" customModule="SocialNetworkForGeekBrains" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JWq-dx-sxl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6x-5X-1Tu">
-                                <rect key="frame" x="16" y="60" width="382" height="42"/>
+                                <rect key="frame" x="16" y="16" width="382" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Получить список друзей"/>
                                 <connections>
@@ -194,7 +195,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d55-pR-yV0">
-                                <rect key="frame" x="16" y="118" width="382" height="42"/>
+                                <rect key="frame" x="16" y="74" width="382" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Получить фотографии"/>
                                 <connections>
@@ -202,7 +203,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AU1-tX-tdS">
-                                <rect key="frame" x="16" y="176" width="382" height="42"/>
+                                <rect key="frame" x="16" y="132" width="382" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Получить группы текущего пользователя"/>
                                 <connections>
@@ -210,7 +211,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FH4-J8-ezF">
-                                <rect key="frame" x="16" y="276" width="382" height="42"/>
+                                <rect key="frame" x="16" y="232" width="382" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Получить группы по запросу"/>
                                 <connections>
@@ -218,7 +219,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N2d-xh-H8O">
-                                <rect key="frame" x="16" y="234" width="382" height="34"/>
+                                <rect key="frame" x="16" y="190" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
